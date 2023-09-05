@@ -8,7 +8,7 @@ import { ButtonSecondary } from "../button-secondary";
 
 export function Navigation() {
   return (
-    <nav className="flex justify-between">
+    <nav className="hidden justify-between md:flex">
       <Link href="#">
         <Image src={Logo} alt="Logo" />
       </Link>

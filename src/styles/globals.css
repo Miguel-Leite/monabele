@@ -8,7 +8,9 @@
 
 .transform-rotate-3 {
   transform: rotate(3.147deg);
+  /* transform: rotate(12.163deg);*/
 }
+
 
 .transform-rotate {
   transform: rotate(-4deg);
@@ -52,6 +54,14 @@
 @media (min-width: 768px) {
   .container {
     max-width: 768px;
+  }
+  .transform-rotate-3 {
+    transform: rotate(3.147deg);
+  }
+
+
+  .transform-rotate {
+    transform: rotate(-4deg);
   }
 }
 

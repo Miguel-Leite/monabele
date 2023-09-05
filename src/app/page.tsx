@@ -31,6 +31,7 @@ import { CardService } from "@/components/card-service";
 import { SecondAccordion } from "@/components/accordion/second-accordion";
 import { Social } from "@/components/social";
 import Link from "next/link";
+import { MobileNavigation } from "@/components/navigation/mobile-navigation";
 
 export default function Home() {
   return (
@@ -38,25 +39,26 @@ export default function Home() {
       <header className='w-full h-screen bg-hero bg-no-repeat bg-cover'>
         <div className="container pt-8">
           <Navigation />
-          <div className="text-center mt-28">
+          <MobileNavigation />
+          <div className="text-center mt-28 md:w-[937px] md:mx-auto">
             <div className="mb-5">
-              <span className="py-3 px-4 rounded-[50px] bg-dark text-center text-sm text-white">
+              <span className="py-3 px-4 rounded-[50px] bg-dark text-center text-xs md:text-sm text-white">
                 I wonder if you already knew how? 🤔
               </span>
             </div>
-            <strong className="text-[56px] font-black leading-[100%] text-white">
-              Enjoy a magical and easy way to <br />
-              <span className="text-primary">exchange money</span> without leaving <br />
+            <strong className="text-[26px] md:text-[56px] font-black leading-relaxed md:leading-[100%] text-white md:break-words">
+              Enjoy a magical and easy way to
+              <span className="text-primary">exchange money</span> without leaving
               home and fast
             </strong>
-            <p className="my-4 text-white text-sm">
-              t is a long established fact that a reader will be distracted by the readable content of a page <br />
-              when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal <br />
+            <p className="my-4 text-white text-xs md:text-sm break-words md:px-32">
+              t is a long established fact that a reader will be distracted by the readable content of a page 
+              when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
               distribution of letters, as opposed
             </p>
 
             <ButtonGradient href="#" withIcon>Let’s start the value exchanges</ButtonGradient>
-            <div className="mt-16">
+            <div className="md:mt-16 mt-10">
               <Scroll />
             </div>
           </div>
@@ -68,7 +70,7 @@ export default function Home() {
         </div>
         <div className="py-14 text-center text-gray-400">
         <p className="mt-14">Meet some of the partners who trusted monabele&rsquo;s service with the impact it could make.</p>
-          <div className="flex items-center justify-center gap-5 mt-20 filter grayscale">
+          <div className="flex items-center justify-center flex-wrap gap-5 mt-20 filter grayscale">
             <Image src={Logo1} alt="Logo 1" />
             <Image src={Logo2} alt="Logo 2" />
             <Image src={Logo3} alt="Logo 3" />
@@ -78,10 +80,10 @@ export default function Home() {
         </div>
       </main>
       <div className="container mt-32">
-        <div className="grid grid-cols-2 gap-20">
-          <div className="pr-20">
-            <strong className="text-4xl font-inter font-black leading-[100%] text-black">
-              Find out More About Us <br />
+        <div className="flex justify-between gap-20 flex-wrap-reverse">
+          <div className="pr-20 md:flex-1">
+            <strong className="text-2xl md:text-4xl font-inter font-black leading-[100%] md:leading-relaxed text-black">
+              Find out More About Us
               and our View on the Market
             </strong>
             <p className="my-8 text-gray-400 text-base ">
@@ -109,13 +111,13 @@ export default function Home() {
             </div>
           </div>
 
-          <div>
+          <div className="md:flex-1">
             <Image src={App1} alt="Mockup app 1" />
           </div>
         </div>
 
-        <div className="flex justify-between items-center mt-28">
-          <strong className="text-3xl font-black text-black leading-[100%]">
+        <div className="flex flex-wrap gap-5 justify-between items-center mt-28">
+          <strong className="text-3xl font-black text-black leading-normal">
             Get Many Advantages <br />
             with our Platform
           </strong>
@@ -125,11 +127,13 @@ export default function Home() {
               t is a long established fact that a reader will be distracted by the <br />
               readable content of a page when looking at its layout normal
             </p>
-            <Button href="#" withIcon>View more</Button>
+            <div className="hidden md:block">
+              <Button href="#" withIcon>View more</Button>
+            </div>
           </div>
         </div>
 
-        <div className="grid grid-cols-4 gap-14 my-52">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14 md:my-52 my-10">
           <Card
             icon={<PaymentIcon />}
             title="Payment"
@@ -165,9 +169,9 @@ export default function Home() {
         </div>
       </div>
 
-      <section className="py-16 pr-36 bg-black">
+      <section className="px-4 md:px-0 py-16 md:pr-36 bg-black">
         <div className="flex justify-between items-center">
-          <div className="flex-1">
+          <div className="flex-1 hidden md:block">
             <Image src={App2} alt="Mockup app 2" />
           </div>
           <div className="flex-1">
@@ -192,7 +196,7 @@ export default function Home() {
           Our services
         </strong>
 
-        <div className="mt-20 grid grid-cols-2 gap-5">
+        <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 gap-5">
           <CardService
             title={`
               Join people who believe 
@@ -216,7 +220,7 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="w-ful h-[880px] flex items-center justify-center py-16 relative mb-28 z-0  bg-background bg-no-repeat bg-cover">
+      <div className="w-ful h-[880px] lg:flex items-center justify-center py-16 relative mb-28 z-0  bg-background bg-no-repeat bg-cover hidden">
         <div className="flex items-center justify-center w-full h-full">
           <div className="container avatar-background flex justify-center items-center">
             <Image src={Avatars} alt="Avatars" className="z-10" />
@@ -248,7 +252,7 @@ export default function Home() {
       </section>
 
       <footer className="py-32 bg-black w-full">
-        <div className="container grid grid-cols-5 gap-20">
+        <div className="container grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-20">
           <div>
             <Image src={Logo} alt="Logo Monabele" />
             <p className="my-8 text-zinc-300 text-xs leading-relaxed">
@@ -301,7 +305,7 @@ export default function Home() {
           </div>
         </div>
         <div className="container border-t-[1px] border-t-gray-300 pt-16 mt-36">
-          <div className="flex justify-between items-center">
+          <div className="flex md:justify-between items-center flex-wrap-reverse justify-center gap-6">
             <p className="text-zinc-300 text-sm font-normal leading-normal">
               © 2023 Monabele. All rights reserved
             </p>

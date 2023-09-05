@@ -3,7 +3,7 @@ import Marquee from "react-fast-marquee";
 
 export function Legend() {
   return (
-    <main className="relative mt-[-3%]">
+    <main className="relative mt-[-4%]">
       <div className="transform-rotate-3 absolute left-0 right-0 z-50">
         <Marquee className="p-4 bg-secondary" speed={100} direction="right">
           <div className="flex items-center gap-6">
