@@ -149,7 +149,7 @@ export default function Home() {
             will be distracted by the readable content 
             of a page when looking at its layout normal"
             link="#"
-          />
+          />Helenamiguel#2000
           <Card
             icon={<TransactionIcon />}
             title="Transactions"
